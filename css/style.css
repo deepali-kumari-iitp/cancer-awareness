@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* ---------------- NAVBAR ---------------- */
 .navbar {
   width: 100%;
   padding: 15px 40px;
@@ -25,8 +26,8 @@ body {
   z-index: 10;
 }
 
-.navbar .logo {
-  font-size: 20px;
+.logo {
+  font-size: 22px;
   font-weight: 700;
   color: #d63384;
 }
@@ -51,7 +52,7 @@ body {
   color: #d63384;
 }
 
-/* HERO SECTION */
+/* ---------------- HERO SECTION ---------------- */
 .hero {
   background: url("../assets/cancerbanner.jpg") center/cover no-repeat;
   height: 80vh;
@@ -62,7 +63,7 @@ body {
   text-align: center;
   color: white;
   position: relative;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .hero .overlay {
@@ -72,12 +73,23 @@ body {
   background: rgba(0,0,0,0.45);
 }
 
-.hero h1, .hero p {
+.hero h1,
+.hero p {
   position: relative;
   z-index: 2;
 }
 
-/* ANIMATIONS */
+.hero h1 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* TEXT ANIMATIONS */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -93,31 +105,32 @@ body {
   }
 }
 
-/* SECTIONS */
+/* ---------------- GLOBAL SECTIONS ---------------- */
 .section {
-  padding: 70px 40px;
+  padding: 80px 40px;
   text-align: center;
 }
 
 .section-title {
-  font-size: 28px;
+  font-size: 30px;
   color: #d63384;
   margin-bottom: 30px;
 }
 
-/* QUOTE CARD */
+/* ---------------- QUOTE CARD ---------------- */
 .quote-card {
-  max-width: 600px;
+  width: 600px;
+  max-width: 100%;
   margin: auto;
   background: white;
-  padding: 25px;
+  padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .quote-card button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
   background: #d63384;
   color: white;
@@ -131,9 +144,10 @@ body {
   background: #b02265;
 }
 
-/* CONTACT CARD */
+/* ---------------- CONTACT CARD ---------------- */
 .contact-card {
-  max-width: 500px;
+  width: 500px;
+  max-width: 100%;
   margin: auto;
   background: white;
   padding: 30px;
@@ -144,7 +158,7 @@ body {
 .contact-card form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
 .contact-card input,
@@ -153,6 +167,11 @@ body {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
+}
+
+.contact-card textarea {
+  height: 120px;
+  resize: none;
 }
 
 .contact-card button {
@@ -170,7 +189,7 @@ body {
   background: #5633a0;
 }
 
-/* FOOTER */
+/* ---------------- FOOTER ---------------- */
 footer {
   padding: 20px;
   background: #333;
@@ -179,9 +198,84 @@ footer {
   margin-top: 50px;
 }
 
-/* RESPONSIVE */
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+/* TABLET (max-width: 992px) */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 12px 25px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+/* MOBILE (max-width: 768px) */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+  }
+
+  .hero {
+    height: 65vh;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .quote-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .quote-card button {
+    width: 100%;
+  }
+
+  .contact-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-card button {
+    width: 100%;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+/* VERY SMALL PHONE (max-width: 450px) */
+@media (max-width: 450px) {
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
   }
 }
